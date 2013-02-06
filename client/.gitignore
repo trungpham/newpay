@@ -1,0 +1,8 @@
+.history
+/.idea
+/*.iml
+/.idea_modules
+/.classpath
+/.project
+/RUNNING_PID
+/.settings
