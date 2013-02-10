@@ -2,7 +2,18 @@
     {
         "settings": [ "master" ],
         "appPort": "8666",
-        "specs": {}
+        "specs": {
+            "checkoutPage": {
+                "type" : "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "title": "Checkout",
+                    "child" : {
+                        "type" : "Checkout"
+                    }
+                }
+            }
+        }
     },
     {
         "settings": [ "environment:development" ],

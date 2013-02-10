@@ -22,19 +22,45 @@ YUI.add('Checkout', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.get('CheckoutModelFoo').getData(function(err, data) {
-                if (err) {
+
+            var stack = new Y.Parallel();
+            var payments;
+            var paymentProfiles;
+
+            ac.models.get('CheckoutModelPayments').getData(stack.add(function(err, data){
+
+                if (err){
                     ac.error(err);
-                    return;
+                }else{
+                    payments = data;
                 }
+
+
+            }));
+
+            ac.models.get('CheckoutModelPaymentProfiles').getData(stack.add(function(err, data){
+
+                if (err){
+                    ac.error(err);
+                }else{
+                    paymentProfiles = data;
+                }
+
+
+            }));
+
+            stack.done(function(){
                 ac.assets.addCss('./index.css');
                 ac.done({
-                    status: 'Mojito is working.',
-                    data: data
-                });
+                    payments: payments,
+                    paymentProfiles: paymentProfiles
+                })
             });
+
         }
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'mojito-assets-addon', 'mojito-models-addon', 'CheckoutModelFoo']});
+}, '0.0.1', {requires: ['mojito',
+    'mojito-assets-addon', 'mojito-models-addon', 'parallel', 'handlebars-helpers',
+    'CheckoutModelPayments', 'CheckoutModelPaymentProfiles']});

@@ -1,16 +1,16 @@
 /*jslint anon:true, sloppy:true, nomen:true*/
-YUI.add('CheckoutModelFoo', function(Y, NAME) {
+YUI.add('CheckoutModelPayments', function(Y, NAME) {
 
 /**
- * The CheckoutModelFoo module.
+ * The CheckoutModelPayments module.
  *
  * @module Checkout
  */
 
     /**
-     * Constructor for the CheckoutModelFoo class.
+     * Constructor for the CheckoutModelPayments class.
      *
-     * @class CheckoutModelFoo
+     * @class CheckoutModelPayments
      * @constructor
      */
     Y.namespace('mojito.models')[NAME] = {
@@ -26,7 +26,17 @@ YUI.add('CheckoutModelFoo', function(Y, NAME) {
          *        data has been retrieved.
          */
         getData: function(callback) {
-            callback(null, { some: 'data' });
+            callback(null, [
+
+                {
+                    type: "CreditCard",
+                    acceptedCardBrands: ["Visa", "MasterCard", "Discover", "AmericanExpress"]
+                },
+                {
+                    type: "PayPal"
+                }
+
+            ]);
         }
 
     };

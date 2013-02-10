@@ -1,4 +1,9 @@
 [{
-    "settings": [ "master" ]
+    "settings": [ "master" ],
+    "checkoutPage": {
+        "verbs": ["get"],
+        "path": "/ui/checkout",
+        "call": "checkoutPage.index"
+    }
 
 }]
