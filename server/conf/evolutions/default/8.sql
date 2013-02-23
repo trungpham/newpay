@@ -1,12 +1,12 @@
-# UserAndPaymentProfile schema
+# PaymentProfileAndUser schema
 
 # --- !Ups
 
-CREATE TABLE UserAndPaymentProfile (
+CREATE TABLE PaymentProfileAndUser (
     userId BIGINT (20) NOT NULL,
     paymentProfileId BIGINT (20) NOT NULL
 );
 
 # --- !Downs
 
-DROP TABLE UserAndPaymentProfile;
+DROP TABLE PaymentProfileAndUser;
