@@ -1,16 +1,16 @@
 /*jslint anon:true, sloppy:true, nomen:true*/
-YUI.add('CheckoutBinderIndex', function(Y, NAME) {
+YUI.add('demoBinderIndex', function(Y, NAME) {
 
 /**
- * The CheckoutBinderIndex module.
+ * The demoBinderIndex module.
  *
- * @module CheckoutBinderIndex
+ * @module demoBinderIndex
  */
 
     /**
-     * Constructor for the CheckoutBinderIndex class.
+     * Constructor for the demoBinderIndex class.
      *
-     * @class CheckoutBinderIndex
+     * @class demoBinderIndex
      * @constructor
      */
     Y.namespace('mojito.binders')[NAME] = {
@@ -21,26 +21,8 @@ YUI.add('CheckoutBinderIndex', function(Y, NAME) {
          */
         init: function(mojitProxy) {
             this.mojitProxy = mojitProxy;
-
-
-            if (window.__showProfiles){
-                this.showProfileToolTip();
-            }
-
-            //register itself with the parent window
         },
 
-        showProfileToolTip: function(){
-            YUI().use('ParentProxy', function(Y){
-                Y.ParentProxy.execute('newUI', {
-                    type: 'toolTip',
-                    url: 'http://google',
-                    width: 400,
-                    height: 200
-
-                });
-            });
-        },
         /**
          * The binder method, invoked to allow the mojit to attach DOM event
          * handlers.
@@ -65,11 +47,6 @@ YUI.add('CheckoutBinderIndex', function(Y, NAME) {
              *
              * });
              */
-
-            node.all('payment-options')
-        },
-        rotatePaymentOptions: function(){
-
         }
 
     };

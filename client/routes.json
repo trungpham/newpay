@@ -4,6 +4,11 @@
         "verbs": ["get"],
         "path": "/ui/checkout",
         "call": "checkoutPage.index"
+    },
+    "demoPage": {
+        "verbs": ["get"],
+        "path": "/demo",
+        "call": "demoPage.index"
     }
 
 }]

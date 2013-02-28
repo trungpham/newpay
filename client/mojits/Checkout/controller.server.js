@@ -53,7 +53,8 @@ YUI.add('Checkout', function(Y, NAME) {
                 ac.assets.addCss('./index.css');
                 ac.done({
                     payments: payments,
-                    paymentProfiles: paymentProfiles
+                    paymentProfiles: paymentProfiles,
+                    showProfiles: true
                 })
             });
 

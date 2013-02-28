@@ -12,6 +12,15 @@
                         "type" : "Checkout"
                     }
                 }
+            },
+            "demoPage": {
+                "type" : "demo",
+                "config": {
+                    "deploy": false,
+                    "child": {
+                        "type" : "demo"
+                    }
+                }
             }
         }
     },

@@ -1,18 +1,29 @@
 <div id="{{mojit_view_id}}">
-    <div>Pay With</div>
-    {{#if paymentProfiles}}
-        <ul>
-            {{#each paymentProfiles}}
-                <li><button>{{paymentProfileText}}</button></li>
-            {{/each}}
-        </ul>
-    {{/if}}
+    <!--<div>Pay With</div>-->
+    <!--{{#if paymentProfiles}}-->
+        <!--<ul>-->
+            <!--{{#each paymentProfiles}}-->
+                <!--<li><button>{{paymentProfileText}}</button></li>-->
+            <!--{{/each}}-->
+        <!--</ul>-->
+    <!--{{/if}}-->
 
-    {{#if payments}}
-        <ul>
-            {{#each payments}}
-            <li><button>{{type}}</button></li>
-            {{/each}}
-        </ul>
+    <!--{{#if payments}}-->
+        <!--<ul>-->
+            <!--{{#each payments}}-->
+            <!--<li><button>{{type}}</button></li>-->
+            <!--{{/each}}-->
+        <!--</ul>-->
+    <!--{{/if}}-->
+    <div>
+        <button class="rotate-able" id="button-0">Checkout wallet</button>
+        <button class="rotate-able" id="button-1" style="display: none">Visa ****4448</button>
+        <button class="rotate-able" id="button-2" style="display: none">Master ****4448</button>
+    </div>
+
+    {{#if showProfiles}}
+        <script type="text/javascript">
+            window.__showProfiles = true;
+        </script>
     {{/if}}
 </div>
