@@ -12,7 +12,8 @@ object ApplicationBuild extends Build {
     jdbc,
     anorm,
     "mysql" % "mysql-connector-java" % "5.1.21",
-    "securesocial" %% "securesocial" % "master-SNAPSHOT"
+    "securesocial" %% "securesocial" % "master-SNAPSHOT" withSources(),
+    "com.typesafe.slick" %% "slick" % "1.0.0" withSources()
   )
 
 
