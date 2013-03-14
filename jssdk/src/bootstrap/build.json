@@ -1,0 +1,11 @@
+{
+    "name": "Bootstrap",
+    "builds": {
+        "Bootstrap": {
+            "jsfiles": [
+                "Bootstrap.js"
+            ]
+
+        }
+    }
+}

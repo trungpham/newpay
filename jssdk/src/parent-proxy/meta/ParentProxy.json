@@ -1,0 +1,6 @@
+{
+    "ParentProxy": {
+
+        "requires": ["PostMessage"]
+    }
+}

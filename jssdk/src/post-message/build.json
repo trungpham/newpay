@@ -1,0 +1,11 @@
+{
+    "name": "PostMessage",
+    "builds": {
+        "PostMessage": {
+            "jsfiles": [
+                "PostMessage.js"
+            ]
+
+        }
+    }
+}

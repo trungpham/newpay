@@ -1,0 +1,6 @@
+{
+    "PostMessage": {
+        "requires": ["json", "oop", "event-custom-base"]
+
+    }
+}

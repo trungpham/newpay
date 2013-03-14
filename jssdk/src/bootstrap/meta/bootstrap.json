@@ -1,0 +1,5 @@
+{
+    "Bootstrap": {
+        "requires": ["PostMessage", "ParentProxy"]
+    }
+}

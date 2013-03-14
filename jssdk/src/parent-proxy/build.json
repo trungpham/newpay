@@ -1,0 +1,11 @@
+{
+    "name": "ParentProxy",
+    "builds": {
+        "ParentProxy": {
+            "jsfiles": [
+                "ParentProxy.js"
+            ]
+
+        }
+    }
+}
